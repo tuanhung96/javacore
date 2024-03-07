@@ -1,0 +1,4 @@
+1000,Item 1,Fashion,1000
+1001,Item 2,Consumption,2000
+1002,Item 3,Electric,3000
+1003,Item 4,Household,4000

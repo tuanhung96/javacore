@@ -1,0 +1,26 @@
+
+g
+java:S1192š"IDefine a constant instead of duplicating this literal "QLBH.txt" 8 times.(ã½õÁ8½“´·á1
+c
+java:S1192"GDefine a constant instead of duplicating this literal "KH.txt" 5 times.(·¦İ8¾“´·á1
+d
+java:S1192T"GDefine a constant instead of duplicating this literal "MH.txt" 5 times.(öïÉ§8¾“´·á1
+{	java:S135½"YReduce the total number of break and continue statements in this loop to use at most one.(ÔÄôúüÿÿÿÿ8¿“´·á1
+?
+java:S1643Ò"Use a StringBuilder instead.(¼›ˆüÿÿÿÿ8Ã“´·á1
+\
+java:S1118":Add a private constructor to hide the implicit public one.(Ó™€¸ÿÿÿÿÿ8’˜´·á1
+H
+java:S1168H"+Return an empty collection instead of null.(¥¹ï8§˜´·á1
+C
+java:S1168l"&Return an empty array instead of null.(¥¹ï8°˜´·á1
+I
+java:S1168Œ"+Return an empty collection instead of null.(¥¹ï8¶˜´·á1
+u
+java:S3776³"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÂªĞåşÿÿÿÿ8›™´·á1
+9
+java:S3626Ö"Remove this redundant jump.(İí¦8™´·á1
+I
+java:S1168Š"+Return an empty collection instead of null.(¥¹ï8¿™´·á1
+I
+java:S1168 "+Return an empty collection instead of null.(¥¹ï8„š´·á1
