@@ -1,0 +1,9 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(α–Μ“
+G	java:S106#"+Replace this use of System.out by a logger.(ΤηΆΧ8™Ρ‡θα1
+Y
+java:S1117$"7Rename "name" which hides the field declared at line 6.(δ‹Ε όÿÿÿÿ8›Ρ‡θα1
+G	java:S106%"+Replace this use of System.out by a logger.(ο°βλ8Ρ‡θα1
+S
+java:S1117&"6Rename "age" which hides the field declared at line 7.(’ΧΒϊ8Ρ‡θα1
+G	java:S106-"+Replace this use of System.out by a logger.(Β®8¦Ρ‡θα1

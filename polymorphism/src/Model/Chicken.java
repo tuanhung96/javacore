@@ -1,4 +1,4 @@
 package Model;
 
-public class Chicken {
+public class Chicken extends Animal{
 }
