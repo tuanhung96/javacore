@@ -1,0 +1,6 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(á–Ì“8ßö¿Áá1
+L	java:S106"+Replace this use of System.out by a logger.(Åû‹îøÿÿÿÿ8†÷¿Áá1
+T
+java:S1117"7Rename "year" which hides the field declared at line 7.(­Ê”˜8†÷¿Áá1
+L	java:S106%"+Replace this use of System.out by a logger.(Ë§‰ºøÿÿÿÿ8Š÷¿Áá1

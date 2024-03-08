@@ -1,0 +1,11 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†îåü8–¨ˆÃá1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Û•¯ñ8©¨ˆÃá1
+G	java:S106"+Replace this use of System.out by a logger.(î•Î—8¸¨ˆÃá1
+X
+java:S1117";Rename "teamSize" which hides the field declared at line 9.(¿“öÖ8¸¨ˆÃá1
+G	java:S106""+Replace this use of System.out by a logger.(ñêäÆ8º¨ˆÃá1
+L	java:S106'"+Replace this use of System.out by a logger.(âİº¦ûÿÿÿÿ8¼¨ˆÃá1
+F	java:S106("+Replace this use of System.out by a logger.(»Ú‰F8¾Ç‰Ãá1
+G	java:S106)"+Replace this use of System.out by a logger.(‡¾÷¨8©ò¡Ãá1
