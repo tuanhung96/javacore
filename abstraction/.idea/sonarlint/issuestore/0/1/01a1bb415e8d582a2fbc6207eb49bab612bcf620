@@ -1,0 +1,10 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(α–Μ“8σ¦ήθα1
+H
+java:S1068"&Remove this unused "id" private field.(τηΌΣώÿÿÿÿ8σ¦ήθα1
+D
+java:S1068"'Remove this unused "cpu" private field.(΄ΦΦΈ8σ¦ήθα1
+I
+java:S1068"'Remove this unused "ram" private field.(―ήμ΄ώÿÿÿÿ8σ¦ήθα1
+I
+java:S1068"'Remove this unused "vga" private field.(“ρ© ώÿÿÿÿ8σ¦ήθα1
