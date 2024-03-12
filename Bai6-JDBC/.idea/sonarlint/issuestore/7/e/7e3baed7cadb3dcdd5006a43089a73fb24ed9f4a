@@ -1,0 +1,9 @@
+
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¥ŸÊ™8úö€‘â1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ë®Æµûÿÿÿÿ8–¾•Œâ1
+G	java:S106"+Replace this use of System.out by a logger.(÷ìÏ¦8“¯×Œâ1
+I
+java:S1905"'Remove this unnecessary cast to "Date".(·«éıÿÿÿÿ8ç¹İÙâ1
+G	java:S106#"+Replace this use of System.out by a logger.(æê¥8‰÷€‘â1
