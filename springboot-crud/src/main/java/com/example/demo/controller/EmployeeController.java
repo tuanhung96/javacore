@@ -11,34 +11,30 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
-public class EmployeeRestController {
+@RequestMapping("/api/employees")
+public class EmployeeController {
+    @Autowired
     private EmployeeService employeeService;
 
-    @Autowired
-    public EmployeeRestController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
-
-    @GetMapping("/employees")
+    @GetMapping
     public ResponseEntity<List<EmployeeDTO>> findAll() {
         List<EmployeeDTO> employeeDTOList = employeeService.findAll();
         return ResponseEntity.ok(employeeDTOList);
     }
 
-    @GetMapping("/employees/{employeeId}")
+    @GetMapping("/{employeeId}")
     public ResponseEntity<EmployeeDTO> findById(@PathVariable @Min(1) int employeeId) {
         EmployeeDTO employeeDTO = employeeService.findById(employeeId);
         return ResponseEntity.ok(employeeDTO);
     }
 
-    @PostMapping("/employees")
+    @PostMapping
     public ResponseEntity<EmployeeDTO> addEmployee(@RequestBody EmployeeDTO employeeDTO) {
         EmployeeDTO savedEmployee = employeeService.save(employeeDTO);
         return ResponseEntity.ok(savedEmployee);
     }
 
-    @PutMapping("/employees/{employeeId}")
+    @PutMapping("/{employeeId}")
     public ResponseEntity<EmployeeDTO> updateEmployee(@PathVariable @Min(1) int employeeId,
                                                       @RequestBody EmployeeDTO employeeDTO) {
         if (!employeeService.existsById(employeeId)) throw new EmployeeNotFoundException("Did not find employee id - " + employeeId);
@@ -46,7 +42,7 @@ public class EmployeeRestController {
         return ResponseEntity.ok(updatedEmployee);
     }
 
-    @DeleteMapping("/employees/{employeeId}")
+    @DeleteMapping("/{employeeId}")
     public String deleteEmployee(@PathVariable @Min(1) int employeeId) {
         if (!employeeService.existsById(employeeId)) throw new EmployeeNotFoundException("Did not find employee id - " + employeeId);
         employeeService.deleteById(employeeId);

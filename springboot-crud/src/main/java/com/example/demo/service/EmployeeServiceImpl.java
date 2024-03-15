@@ -13,17 +13,15 @@ import java.util.Optional;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
-    private EmployeeRepository employeeRepository;
-
     @Autowired
-    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
-        this.employeeRepository = employeeRepository;
-    }
+    private EmployeeRepository employeeRepository;
+    @Autowired
+    private EmployeeMapper employeeMapper;
 
     @Override
     public List<EmployeeDTO> findAll() {
         return employeeRepository.findAll().stream()
-                .map(EmployeeMapper::toEmployeeDTO)
+                .map(employee -> employeeMapper.employeeToEmployeeDTO(employee))
                 .toList();
     }
 
@@ -31,32 +29,28 @@ public class EmployeeServiceImpl implements EmployeeService{
     public EmployeeDTO findById(int employeeId) {
         Optional<Employee> result = employeeRepository.findById(employeeId);
         Employee employee = null;
-        if (result.isPresent()) {
-            employee = result.get();
-        } else {
-            throw new EmployeeNotFoundException("Did not find employee id - " + employeeId);
-        }
-        return EmployeeMapper.toEmployeeDTO(employee);
+        if (result.isPresent())  employee = result.get();
+        else throw new EmployeeNotFoundException("Did not find employee id - " + employeeId);
+
+        return employeeMapper.employeeToEmployeeDTO(employee);
     }
 
     @Override
     public EmployeeDTO save(EmployeeDTO employeeDTO) {
-        // convert employeeDTO to employee
-        Employee employee = new Employee(employeeDTO.getFirstName(), employeeDTO.getLastName(), employeeDTO.getEmail());
-        // save employee to database
+        Employee employee = employeeMapper.employeeDTOtoEmployee(employeeDTO);
         Employee savedEmployee = employeeRepository.save(employee);
-        // convert employee to employeeDTO
-        return EmployeeMapper.toEmployeeDTO(savedEmployee);
+
+        return employeeMapper.employeeToEmployeeDTO(savedEmployee);
     }
 
     @Override
     public EmployeeDTO update(int employeeId, EmployeeDTO employeeDTO) {
-        // convert employeeDTO to employee
-        Employee employee = new Employee(employeeId, employeeDTO.getFirstName(), employeeDTO.getLastName(), employeeDTO.getEmail());
-        // save employee to database
+        Employee employee = employeeMapper.employeeDTOtoEmployee(employeeDTO);
+        employee.setId(employeeId);
+
         Employee updatedEmployee = employeeRepository.save(employee);
-        // convert employee to employeeDTO
-        return EmployeeMapper.toEmployeeDTO(updatedEmployee);
+
+        return employeeMapper.employeeToEmployeeDTO(updatedEmployee);
     }
 
     @Override

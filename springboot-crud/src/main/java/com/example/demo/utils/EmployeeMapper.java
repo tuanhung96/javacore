@@ -2,13 +2,10 @@ package com.example.demo.utils;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.model.dto.EmployeeDTO;
+import org.mapstruct.Mapper;
 
-public class EmployeeMapper {
-    public static EmployeeDTO toEmployeeDTO(Employee employee) {
-        EmployeeDTO employeeDTO = new EmployeeDTO();
-        employeeDTO.setFirstName(employee.getFirstName());
-        employeeDTO.setLastName(employee.getLastName());
-        employeeDTO.setEmail(employee.getEmail());
-        return employeeDTO;
-    }
+@Mapper(componentModel = "spring")
+public interface EmployeeMapper {
+    EmployeeDTO employeeToEmployeeDTO(Employee entity);
+    Employee employeeDTOtoEmployee(EmployeeDTO dto);
 }
